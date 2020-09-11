@@ -11,8 +11,8 @@
         <img src="https://via.placeholder.com/163x35" alt="логотип интернет-магазина Девайс" width="163" height="35">
       </a>
 
-      <form class="nav__search search" action="https://echo.htmlacademy.ru" method="get" id="header-search" placeholder="Поиск по сайту">
-        <input class="search__input" type="search" name="header-search" >
+      <form class="nav__search search" action="https://echo.htmlacademy.ru" method="get" id="header-search">
+        <input class="search__input" type="search" name="header-search" placeholder="Поиск по сайту">
         <button class="search__button" type="submit">Найти</button>
       </form>
 
@@ -69,8 +69,68 @@
   </header>
 
 
-  <main class="main">
+  <main class="catalog-main">
+    <h1 class="catalog-main__title">Моноподы для селфи</h1>
 
+    <ul class="catalog-main__breadcrumbs breadcrumbs">
+      <li class="breadcrumbs__item">
+        <a class="breadcrumbs__link" href="index.html">Главная</a>
+      </li>
+      <li class="breadcrumbs__item">
+        <a class="breadcrumbs__link" href="catalog.html">Каталог товаров</a>
+      </li>
+      <li class="breadcrumbs__item">
+        <a class="breadcrumbs__link">Моноподы для селфи</a>
+      </li>
+    </ul>
+
+    <form class="form-filters" id="form-filter" action="https://echo.htmlacademy.ru" method="get">
+      <!-- здесь фильтры -->
+    </form>
+
+    <ul class="products">
+      <li class="product">
+        <img class="product__image" src="https://via.placeholder.com/360x380" alt="Селфи-палка простой конструкции">
+        <h2 class="product__title">Любительская селфи-палка</h2>
+        <p class="product__price">500 руб.</p>
+      </li>
+
+      <li class="product">
+        <img class="product__image" src="https://via.placeholder.com/360x380" alt="Селфи-палка с bluetooth">
+        <h2 class="product__title">Профессиональная селфи-палка</h2>
+        <p class="product__price">1 500 руб.</p>
+      </li>
+
+      <li class="product">
+        <img class="product__image" src="https://via.placeholder.com/360x380" alt="Селфи-палка поплавок">
+        <h2 class="product__title">Непотопляемая селфи-палка</h2>
+        <p class="product__price">2 500 руб.</p>
+      </li>
+
+      <li class="product product--new">
+        <img class="product__image" src="https://via.placeholder.com/360x380" alt="Селфи-палка в виде руки">
+        <h2 class="product__title">Селфи-палка «Следуй за мной»</h2>
+        <p class="product__price">4 900 руб.</p>
+      </li>
+  </ul>
+
+  <ul class="pagination">
+    <li class="pagination__item">
+      <a class="pagination__link pagination__link--current">Назад</a>
+    </li>
+    <li class="pagination__item">
+      <a class="pagination__link pagination__link--current">1</a>
+    </li>
+    <li class="pagination__item">
+      <a class="pagination__link" href="catalog.html">2</a>
+    </li>
+    <li class="pagination__item">
+      <a class="pagination__link" href="catalog.html">3</a>
+    </li>
+    <li class="pagination__item">
+      <a class="pagination__link" href="catalog.html">Вперед</a>
+    </li>
+  </ul>
   </main>
 
 
