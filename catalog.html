@@ -6,5 +6,178 @@
 </head>
 <body>
 
+      <form class="nav__search search" action="https://echo.htmlacademy.ru" method="get" id="header-search">
+        <input class="search__input" type="search" name="header-search" placeholder="Поиск по сайту">
+        <button class="search__button" type="submit">Найти</button>
+      </form>
+
+      <ul class="nav__user user">
+        <li class="user__item">
+          <a class="user__link user__link--profile" href="">Валентин Петухов</a>
+          <a class="user__link user__link--logout" href="">Выйти</a>
+        </li>
+      </ul>
+
+      <ul class="nav__site-function site-function">
+        <li class="site-function__item">
+          <a class="site-function__link site-function__link--compare" href="">Сравнить</a>
+        </li>
+        <li class="site-function__item">
+          <a class="site-function__link site-function__link--cart" href="">Корзина</a>
+        </li>
+      </ul>
+
+      <ul class="nav__menu menu">
+        <li class="menu__item">
+          <a class="menu__link" href="catalog.html">Каталог товаров</a>
+            <ul class="catalog-menu catalog-menu--hidden">
+              <li class="catalog-menu__item">
+                <a class="catalog-menu__link" href="catalog.html" >Виртуальная реальность</a>
+              </li>
+              <li class="catalog-menu__item">
+                <a class="catalog-menu__link" href="catalog.html" >Фитнес-браслеты</a>
+              </li>
+              <li class="catalog-menu__item">
+                <a class="catalog-menu__link" href="catalog.html" >Квадрокоптер</a>
+              </li>
+              <li class="catalog-menu__item">
+                <a class="catalog-menu__link" href="catalog.html" >Моноподы для селфи</a>
+              </li>
+              <li class="catalog-menu__item">
+                <a class="catalog-menu__link" href="catalog.html" >Умные часы</a>
+              </li>
+              <li class="catalog-menu__item">
+                <a class="catalog-menu__link" href="catalog.html" >Экшн-камеры</a>
+              </li>
+            </ul>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="">Доставка</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="">Гарантия</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="">Контакты</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+ <main class="catalog-main">
+    <h1 class="catalog-main__title">Моноподы для селфи</h1>
+
+    <ul class="catalog-main__breadcrumbs breadcrumbs">
+      <li class="breadcrumbs__item">
+        <a class="breadcrumbs__link" href="index.html">Главная</a>
+      </li>
+      <li class="breadcrumbs__item">
+        <a class="breadcrumbs__link" href="catalog.html">Каталог товаров</a>
+      </li>
+      <li class="breadcrumbs__item">
+        <a class="breadcrumbs__link">Моноподы для селфи</a>
+      </li>
+    </ul>
+
+    <form class="form-filters" id="form-filter" action="https://echo.htmlacademy.ru" method="get">
+
+    </form>
+
+    <ul class="products">
+      <li class="product">
+        <img class="product__image" src="https://via.placeholder.com/360x380" alt="Селфи-палка простой конструкции">
+        <h2 class="product__title"><a class="product__link" href="">Любительская селфи-палка</a></h2>
+        <p class="product__price">500 руб.</p>
+      </li>
+
+      <li class="product">
+        <img class="product__image" src="https://via.placeholder.com/360x380" alt="Селфи-палка с bluetooth">
+        <h2 class="product__title"><a class="product__link" href="">Профессиональная селфи-палка</a></h2>
+        <p class="product__price">1 500 руб.</p>
+      </li>
+
+      <li class="product">
+        <img class="product__image" src="https://via.placeholder.com/360x380" alt="Селфи-палка поплавок">
+        <h2 class="product__title"><a class="product__link" href="">Непотопляемая селфи-палка</a></h2>
+        <p class="product__price">2 500 руб.</p>
+      </li>
+
+      <li class="product product--new">
+        <img class="product__image" src="https://via.placeholder.com/360x380" alt="Селфи-палка в виде руки">
+        <h2 class="product__title"><a class="product__link" href="">Селфи-палка «Следуй за мной»</a></h2>
+        <p class="product__price">4 900 руб.</p>
+      </li>
+    </ul>
+
+    <ul class="pagination">
+      <li class="pagination__item">
+        <a class="pagination__link pagination__link--current">Назад</a>
+      </li>
+      <li class="pagination__item">
+        <a class="pagination__link pagination__link--current">1</a>
+      </li>
+      <li class="pagination__item">
+        <a class="pagination__link" href="catalog.html">2</a>
+      </li>
+      <li class="pagination__item">
+        <a class="pagination__link" href="catalog.html">3</a>
+      </li>
+      <li class="pagination__item">
+        <a class="pagination__link" href="catalog.html">Вперед</a>
+      </li>
+    </ul>
+  </main>
+
+  <footer class="footer">
+    <a class="footer__logo logo logo--footer" href="index.html">
+      <img src="https://via.placeholder.com/163x35" alt="логотип интернет-магазина Девайс" width="163" height="35">
+    </a>
+
+    <ul class="footer__user user">
+      <li class="user__item">
+        <a class="user__link user__link--profile" href="">Валентин Петухов</a>
+        <a class="user__link user__link--logout" href="">Выйти</a>
+      </li>
+    </ul>
+
+    <ul class="footer__site-function site-function">
+      <li class="site-function__item">
+        <a class="site-function__link site-function__link--compare" href="">Сравнить</a>
+      </li>
+      <li class="site-function__item">
+        <a class="site-function__link site-function__link--cart" href="">Корзина</a>
+      </li>
+    </ul>
+
+    <p class="footer__address">г. Москва, ул. Строителей, 15</p>
+
+    <ul class="footer__menu menu menu--footer">
+      <li class="menu__item">
+        <a class="menu__link" href="">Доставка</a>
+      </li>
+      <li class="menu__item">
+        <a class="menu__link" href="">Гарантия</a>
+      </li>
+      <li class="menu__item">
+        <a class="menu__link" href="">Контакты</a>
+      </li>
+    </ul>
+
+    <p class="footer__telephone">Тел.: +7(495)495-95-95</p>
+
+    <ul class="footer__social social">
+      <li class="social__item">
+        <a class="social__link social__link--fb" href="facebook.com">Фейсбук</a>
+      </li>
+      <li class="social__item">
+        <a class="social__link social__link--insta" href="instagam.com">Инстаграм</a>
+      </li>
+      <li class="social__item">
+        <a class="social__link social__link--vk" href="vkontakte.ru">Вконтакте</a>
+      </li>
+    </ul>
+
+    <a class="footer__copyright" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
+  </footer>
 </body>
 </html>
