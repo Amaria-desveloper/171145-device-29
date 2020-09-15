@@ -43,16 +43,16 @@
                 <a class="catalog-menu__link" href="catalog.html" >Фитнес-браслеты</a>
               </li>
               <li class="catalog-menu__item">
-                <a class="catalog-menu__link" href="catalog.html" >Квадрокоптер</a>
+                <a class="catalog-menu__link" href="catalog.html">Квадрокоптер</a>
               </li>
               <li class="catalog-menu__item">
-                <a class="catalog-menu__link" href="catalog.html" >Моноподы для селфи</a>
+                <a class="catalog-menu__link" href="catalog.html">Моноподы для селфи</a>
               </li>
               <li class="catalog-menu__item">
-                <a class="catalog-menu__link" href="catalog.html" >Умные часы</a>
+                <a class="catalog-menu__link" href="catalog.html">Умные часы</a>
               </li>
               <li class="catalog-menu__item">
-                <a class="catalog-menu__link" href="catalog.html" >Экшн-камеры</a>
+                <a class="catalog-menu__link" href="catalog.html">Экшн-камеры</a>
               </li>
             </ul>
         </li>
@@ -84,53 +84,148 @@
       </li>
     </ul>
 
-    <form class="form-filters" id="form-filter" action="https://echo.htmlacademy.ru" method="get">
+  <section class="form">
+    <div class="form__header">
+      <h2 class="form__title">Фильтр:</h2>
+    </div>
 
+    <form class="form__filter filter" id="form-filter" action="https://echo.htmlacademy.ru" method="get">
+      <fieldset class="filter__fieldset">
+        <legend class="filter__legend">Стоимость</legend>
+          <div class="filter__range range">
+            <div class="range__fill">
+              <button class="filter__button filter__button--min" type="button"></button>
+              <button class="filter__button filter__button--max" type="button"></button>
+
+              <label class="visually-hidden" for="min-price" >от</label>
+              <input class="range__input" type="number" name="min-price" id="min-price" value="0" step="100">
+
+              <label class="visually-hidden" for="max-price">до</label>
+              <input class="range__input" type="number" name="max-price" id="max-price" value="5000" step="100">
+            </div>
+          </div>
+      </fieldset>
+
+      <fieldset class="filter__title">
+        <legend class="filter__legend">Цвет</legend>
+        <label class="filter__label">
+          Чёрный
+          <input class="filter__checkbox" type="checkbox" name="color" value="black" checked>
+        </label>
+        <label class="filter__label">
+          Белый
+          <input class="filter__checkbox" type="checkbox" name="color" value="white">
+        </label>
+        <label class="filter__label">
+          Синий
+          <input class="filter__checkbox" type="checkbox" name="color" value="blue" checked>
+        </label>
+        <label class="filter__label">
+          Красный
+          <input class="filter__checkbox" type="checkbox" name="color" value="red" checked>
+        </label>
+        <label class="filter__label">
+          Розовый
+          <input class="filter__checkbox" type="checkbox" name="color" value="pink">
+        </label>
+      </fieldset>
+
+      <fieldset class="filter__fieldset">
+        <legend>Bluetooth</legend>
+        <label class="filter__label">
+          Есть
+          <input class="filter__radio" type="radio" name="bluetooth" value="include">
+        </label>
+        <label class="filter__label">
+          Нет
+          <input class="filter__radio" type="radio" name="bluetooth" value="exclude">
+        </label>
+      </fieldset>
+
+      <button class="filter__submit more-btn" type="submit" form="form-filter">Показать</button>
     </form>
+  </section>
 
-    <ul class="products">
-      <li class="product">
-        <img class="product__image" src="https://via.placeholder.com/360x380" alt="Селфи-палка простой конструкции">
-        <h2 class="product__title"><a class="product__link" href="">Любительская селфи-палка</a></h2>
-        <p class="product__price">500 руб.</p>
-      </li>
+  <section class="catalog">
+    <div class="catalog__sorting sorting">
+      <h2 class="sorting__title">Сортировка:</h2>
 
-      <li class="product">
-        <img class="product__image" src="https://via.placeholder.com/360x380" alt="Селфи-палка с bluetooth">
-        <h2 class="product__title"><a class="product__link" href="">Профессиональная селфи-палка</a></h2>
-        <p class="product__price">1 500 руб.</p>
-      </li>
+      <ul class="sorting__item">
+        <li class="sorting__tem">
+          <a class="sorting__link sorting__link--price sorting__link--current" href="">По цене</a>
+        </li>
+        <li class="sorting__item">
+          <a class="sorting__link sorting__link--type" href="">По типу</a>
+        </li>
+        <li class="sorting__item">
+          <a class="sorting__link sorting__link--rating" href="">По популярности</a>
+        </li>
+      </ul>
 
-      <li class="product">
-        <img class="product__image" src="https://via.placeholder.com/360x380" alt="Селфи-палка поплавок">
-        <h2 class="product__title"><a class="product__link" href="">Непотопляемая селфи-палка</a></h2>
-        <p class="product__price">2 500 руб.</p>
-      </li>
+      <ul class="sorting__arrows">
+        <li class="sorting__arrow">
+          <a class="sorting__arrow-up" href="">Сортировка по возрастанию</a>
+        </li>
+        <li class="sorting__arrow">
+          <a class="sorting__arrow-down" href="">Сортировка по убыванию</a>
+        </li>
+      </ul>
+    </div>
 
-      <li class="product product--new">
-        <img class="product__image" src="https://via.placeholder.com/360x380" alt="Селфи-палка в виде руки">
-        <h2 class="product__title"><a class="product__link" href="">Селфи-палка «Следуй за мной»</a></h2>
-        <p class="product__price">4 900 руб.</p>
-      </li>
-    </ul>
+    <div class="catalog__display display">
+      <ul class="display__products products">
+        <li class="product">
+          <img class="product__image" src="https://via.placeholder.com/360x380" alt="Селфи-палка простой конструкции">
+          <h3 class="product__title">
+            <a class="product__link" href="">Любительская селфи-палка</a>
+          </h3>
+          <p class="product__price">500 руб.</p>
+        </li>
 
-    <ul class="pagination">
-      <li class="pagination__item">
-        <a class="pagination__link pagination__link--current">Назад</a>
-      </li>
-      <li class="pagination__item">
-        <a class="pagination__link pagination__link--current">1</a>
-      </li>
-      <li class="pagination__item">
-        <a class="pagination__link" href="catalog.html">2</a>
-      </li>
-      <li class="pagination__item">
-        <a class="pagination__link" href="catalog.html">3</a>
-      </li>
-      <li class="pagination__item">
-        <a class="pagination__link" href="catalog.html">Вперед</a>
-      </li>
-    </ul>
+        <li class="product">
+          <img class="product__image" src="https://via.placeholder.com/360x380" alt="Селфи-палка с bluetooth">
+          <h3 class="product__title">
+            <a class="product__link" href="">Профессиональная селфи-палка</a>
+          </h3>
+          <p class="product__price">1 500 руб.</p>
+        </li>
+
+        <li class="product">
+          <img class="product__image" src="https://via.placeholder.com/360x380" alt="Селфи-палка поплавок">
+          <h3 class="product__title">
+            <a class="product__link" href="">Непотопляемая селфи-палка</a>
+          </h3>
+          <p class="product__price">2 500 руб.</p>
+        </li>
+
+        <li class="product product--new">
+          <img class="product__image" src="https://via.placeholder.com/360x380" alt="Селфи-палка в виде руки">
+          <h3 class="product__title">
+            <a class="product__link" href="">Селфи-палка «Следуй за мной»</a>
+          </h3>
+          <p class="product__price">4 900 руб.</p>
+        </li>
+      </ul>
+
+      <ul class="pagination">
+        <li class="pagination__item">
+          <a class="pagination__link">Назад</a>
+        </li>
+        <li class="pagination__item">
+          <a class="pagination__link pagination__link--current">1</a>
+        </li>
+        <li class="pagination__item">
+          <a class="pagination__link" href="catalog.html">2</a>
+        </li>
+        <li class="pagination__item">
+          <a class="pagination__link" href="catalog.html">3</a>
+        </li>
+        <li class="pagination__item">
+          <a class="pagination__link" href="catalog.html">Вперед</a>
+        </li>
+      </ul>
+    </div>
+  </section>
   </main>
 
   <footer class="footer">
