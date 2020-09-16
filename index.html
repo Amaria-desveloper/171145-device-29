@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <title>HTML Academy: Девайс</title>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
-  <link href="./css/normalize.css" rel="stylesheet">
+  <link href="./css/normalize .css" rel="stylesheet">
   <link href="./css/style.css" rel="stylesheet">
 </head>
 <body>
-  <header class="header container">
+  <header class="header">
     <nav class="header__nav nav">
       <a class="nav__logo logo">
         <img src="https://via.placeholder.com/163x35" alt="логотип интернет-магазина Девайс" width="163" height="35">
@@ -36,7 +36,7 @@
 
       <ul class="nav__menu menu">
         <li class="menu__item">
-          <a class="menu__link" href="catalog.html">Каталог товаров</a>
+          <a class="menu__link menu__link--open" href="catalog.html">Каталог товаров</a>
             <ul class="catalog-menu catalog-menu--hidden">
               <li class="catalog-menu__item">
                 <a class="catalog-menu__link" href="catalog.html" >Виртуальная реальность</a>
@@ -93,7 +93,7 @@
         <ol class="slider__list">
           <li class="slider__item">
             <img class="slider__photo" src="http://via.placeholder.com/384x486" alt="телескопическая селфи-палка" width="384" height="486">
-            <h3 class="slider__title">Делай селфи, как Бен Стиллер!</h3>
+            <h3 class="slider__title h h--3">Делай селфи, как Бен Стиллер!</h3>
             <p class="slider__text">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
             <a class="slider__link more-btn" href="catalog.html">Подробнее</a>
             <table class="slider__description item-desc">
@@ -111,7 +111,7 @@
           </li>
           <li class="slider__item">
             <img class="slider__photo" src="http://via.placeholder.com/345x485" alt="телескопическая селфи-палка" width="345" height="485">
-            <h3 class="slider__title">Худеем правильно!</h3>
+            <h3 class="slider__title h h--3">Худеем правильно!</h3>
             <p class="slider__text">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
             <a class="slider__link more-btn" href="catalog.html">Подробнее</a>
             <table class="slider__description item-desc">
@@ -125,7 +125,7 @@
           </li>
           <li class="slider__item">
             <img class="slider__photo" src="http://via.placeholder.com/526x334" alt="телескопическая селфи-палка" width="526" height="334">
-            <h3 class="slider__title">Порхает как бабочка, жалит как пчела!</h3>
+            <h3 class="slider__title h h--3">Порхает как бабочка, жалит как пчела!</h3>
             <p class="slider__text">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
             <a class="slider__link more-btn" href="catalog.html">Подробнее</a>
             <table class="slider__description item-desc">
@@ -148,22 +148,22 @@
 
       <ul class="popular__list">
         <li class="popular__item">
-          <a class="popular__link" href="catalog.html">Виртуальная реальность</a>
+          <a class="popular__link popular__link--vr" href="catalog.html">Виртуальная реальность</a>
         </li>
         <li class="popular__item">
-          <a class="popular__link" href="catalog.html">Моноподы для селфи</a>
+          <a class="popular__link popular__link--monopod" href="catalog.html">Моноподы для селфи</a>
         </li>
         <li class="popular__item">
-          <a class="popular__link" href="catalog.html">Экшн-камеры</a>
+          <a class="popular__link popular__link--action-camera" href="catalog.html">Экшн-камеры</a>
         </li>
         <li class="popular__item">
-          <a class="popular__link" href="catalog.html">Фитнес-браслеты</a>
+          <a class="popular__link popular__link--fitness-bracelet" href="catalog.html">Фитнес-браслеты</a>
         </li>
         <li class="popular__item">
-          <a class="popular__link" href="catalog.html">Умные часы</a>
+          <a class="popular__link pupular__link--smart-watch" href="catalog.html">Умные часы</a>
         </li>
         <li class="popular__item">
-          <a class="popular__link" href="catalog.html">Квадрокоптеры</a>
+          <a class="popular__link popular__link--quadrocopter" href="catalog.html">Квадрокоптеры</a>
         </li>
       </ul>
     </section>
@@ -173,28 +173,28 @@
 
       <ul class="service__list">
         <li class="service__item">
-          <button class="service__button service__button--checked" type="button">Доставка</button>
+          <button class="service__button service__button--checked more-btn" type="button">Доставка</button>
         </li>
         <li class="service__item">
-          <button class="service__button" type="button">Гарантия</button>
+          <button class="service__button more-btn" type="button">Гарантия</button>
         </li>
         <li class="service__item">
-          <button class="service__button" type="button">Кредит</button>
+          <button class="service__button more-btn" type="button">Кредит</button>
         </li>
       </ul>
 
       <div class="service__description service__description--delivery service__description--active">
-        <h3 class="service__description-headline">Доставка</h3>
+        <h3 class="service__description-headline h h--3">Доставка</h3>
         <p class="service__description-text">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
       </div>
 
       <div class="service__description service__description--warranty">
-        <h3 class="service__description-headline">Гарантия</h3>
+        <h3 class="service__description-headline h h--3">Гарантия</h3>
         <p class="service__description-text">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
       </div>
 
       <div class="service__description service__description--credit">
-        <h3 class="service__description-headline">Кредит</h3>
+        <h3 class="service__description-headline h h--3">Кредит</h3>
         <p class="service__description-text">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
       </div>
     </section>
@@ -227,7 +227,8 @@
     </section>
 
     <section class="about">
-      <h2 class="about__title">О нас</h2>
+      <h2 class="visually-hidden">Информация о компании</h2>
+        <h3 class="about__title h h--3">О нас</h3>
         <p class="about__text">Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
         <p class="about__text">Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
 
@@ -241,7 +242,7 @@
     </section>
 
     <section class="contacts">
-      <h2 class="contacts__title">Контакты</h2>
+      <h3 class="contacts__title h h--3">Контакты</h3>
         <p class="contacts__text">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
 
         <a class="contacts__map map" href=" ">
@@ -274,7 +275,7 @@
 
     <p class="footer__address">г. Москва, ул. Строителей, 15</p>
 
-    <ul class="footer__menu menu menu--footer">
+    <ul class="footer__menu menu">
       <li class="menu__item">
         <a class="menu__link" href=" ">Доставка</a>
       </li>
@@ -290,17 +291,29 @@
 
     <ul class="footer__social social">
       <li class="social__item">
-        <a class="social__link social__link--fb" href="facebook.com">Фейсбук</a>
+        <a class="social__link social__link--fb" href="facebook.com">
+          <span class="visually-hidden">адрес страницы в Фейсбуке</span>
+          <img src="https://via.placeholder.com/32x32" width="32" height="32">
+        </a>
       </li>
       <li class="social__item">
-        <a class="social__link social__link--insta" href="instagam.com">Инстаграм</a>
+        <a class="social__link social__link--insta" href="instagam.com">
+          <span class="visually-hidden">адрес профиля в Инстаграм</span>
+          <img src="https://via.placeholder.com/32x32" width="32" height="32">
+        </a>
       </li>
       <li class="social__item">
-        <a class="social__link social__link--vk" href="vkontakte.ru">Вконтакте</a>
+        <a class="social__link social__link--vk" href="vkontakte.ru">
+          <span class="visually-hidden">адрес профиля во Вконтакте</span>
+          <img src="https://via.placeholder.com/32x32" width="32" height="32">
+        </a>
       </li>
     </ul>
 
-    <a class="footer__copyright" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
+    <a class="footer__copyright" href="https://htmlacademy.ru/intensive/htmlcss">
+      <span class="visually-hidden">HTML Academy</span>
+      <img src="https://via.placeholder.com/27x34" alt="" width="27" height="34">
+    </a>
   </footer>
 </body>
 </html>
