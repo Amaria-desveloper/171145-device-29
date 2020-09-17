@@ -283,6 +283,10 @@ img {
   padding-left: 0;
 }
 
+.catalog-menu__link {
+  color: var(--basic-black);
+}
+
 .catalog-menu__link:visited {
   color: var(--basic-black);
 }
