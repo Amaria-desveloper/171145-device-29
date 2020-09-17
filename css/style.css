@@ -20,8 +20,7 @@
 /* fonts */
 @font-face {
   font-family: "Gilroy", sans-serif;
-  src: local("Verdana"),
-       local("Roboto"),
+  src: local("Gilroyextrabold"),
        url("../fonts/gilroyextrabold.woff2") format("woff2"),
        url("../fonts/gilroyextrabold.woff") format("woff");
   font-style: normal;
@@ -30,13 +29,22 @@
 
 @font-face {
   font-family: "Gilroy", sans-serif;
-  src: local("Verdana"),
-       local("Roboto"),
-       url("../fonts/gilroylight.woff2") format("woff2"),
-       url("../fonts/gilroylight.woff") format("woff");
+  src: local("Gilroylight"),
+      url("../fonts/gilroylight.woff2") format("woff2"),
+      url("../fonts/gilroylight.woff") format("woff");
   font-style: normal;
   font-weight: 300;
 }
+
+@font-face {
+  font-family: "Open Sans", sans-serif;
+  src: local("OpenSans light"),
+      local("Open Sans light")
+      url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+  font-style: normal;
+  font-weight: 300;
+}
+
 
 /* global */
 body {
@@ -45,7 +53,7 @@ body {
   font-size: 15px;
   line-height: 28px;
   color: var(--basic-black);
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans";
   font-weight: 300;
   background-color: var(--basic-white);
 }
@@ -59,12 +67,7 @@ img {
   height: auto;
 }
 
-ul,
-ol {
-  list-style: none;
-  padding-left: 0;
-}
-
+/* */
 .visually-hidden {
   position: absolute;
   clip: rect(1px, 1px, 1px, 1px);
@@ -78,7 +81,6 @@ ol {
 .h {
   color: var(--basic-black);
   font-family: "Gilroy";
-  font-style: normal;
   font-weight: 800;
 }
 
@@ -123,29 +125,14 @@ ol {
   top: 0;
 }
 
+
 /* header */
 .header {
   background-image: linear-gradient(var(--basic-white) 5%, var(--special-yellow) 5%, var(--special-yellow) 95%, var(--basic-white) 95%);
 }
 
-.user__link:visited,
-.site-function__link:visited,
-.catalog-menu__link:visited {
-  color: var(--basic-black);
-}
 
-.user__link:hover,
-.site-function__link:hover,
-.catalog-menu__link:hover {
-  opacity: 0.6;
-}
-
-.user__link:active,
-.site-function__link:active,
-.catalog-menu__link:active {
-  opacity: 0.3;
-}
-
+/* search */
 .search {
   max-width: 440px;
   margin-left: 60px;
@@ -160,8 +147,13 @@ ol {
   width: 355px;
   height: 50px;
   border: none;
-  background-color: transparent;
   border-bottom: 2px solid transparent;
+  background-color: transparent;
+
+  font-size: inherit;
+  color: var(--input-placeholder);
+  font-family: "Open Sans";
+  font-weight: 300;
 }
 
 .search__input[type='search']::-webkit-search-decoration,
@@ -169,11 +161,6 @@ ol {
   display: none;
 }
 
-.search__input::placeholder {
-  font-size: inherit;
-  color: var(--input-placeholder);
-  font-weight: 300;
-}
 .search__input:hover::placeholder{
   color: var(--input-placeholder-hover);
 }
@@ -222,6 +209,63 @@ ol {
   background-color: var(--basic-black);
 }
 
+
+/* user */
+.user {
+  list-style: none;
+  padding-left: 0;
+}
+
+.user__link:visited {
+  color: var(--basic-black);
+}
+
+.user__link:hover {
+  opacity: 0.6;
+}
+
+.user__link:active {
+  opacity: 0.3;
+}
+
+.user__link:visited {
+  color: var(--basic-black);
+}
+
+.user__link:hover {
+  opacity: 0.6;
+}
+
+.user__link:active {
+  opacity: 0.3;
+}
+
+
+/* site-function */
+.site-function {
+  list-style: none;
+  padding-left: 0;
+}
+
+.site-function__link:visited {
+  color: var(--basic-black);
+}
+
+.site-function__link:hover {
+  opacity: 0.6;
+}
+
+.site-function__link:active {
+  opacity: 0.3;
+}
+
+
+/* menu */
+.menu {
+  list-style: none;
+  padding-left: 0;
+}
+
 .menu__link {
   font-size: 18px;
   line-height: 22px;
@@ -232,30 +276,68 @@ ol {
   text-transform: uppercase;
 }
 
+
+/* catalog-menu*/
+.catalog-menu {
+  list-style: none;
+  padding-left: 0;
+}
+
+.catalog-menu__link:visited {
+  color: var(--basic-black);
+}
+
+.catalog-menu__link:hover {
+  opacity: 0.6;
+}
+
+.catalog-menu__link:active {
+  opacity: 0.3;
+}
+
+
 /* promo */
+/* slider */
+.slider__list {
+  list-style: none;
+  padding-left: 0;
+}
+
 .slider__link {
   width: 220px;
+}
+
+
+/* toggle*/
+.toggle {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* item-desc */
+.item-desc {
+  letter-spacing: .1em;
+  color: var(--basic-black);
+  font-family: "Gilroy";
+  font-weight: 300;
 }
 
 .item-desc__value {
   font-size: 36px;
   line-height: 42px;
-  letter-spacing: .1em;
-  color: var(--basic-black);
-  font-family: "Gilroy";
-  font-weight: 300;
 }
 
 .item-desc__feature {
   font-size: 13px;
   line-height: 15px;
-  letter-spacing: .1em;
-  color: var(--basic-black);
-  font-family: "Gilroy";
-  font-weight: 300;
 }
 
 /* popular */
+.popular__list {
+  list-style: none;
+  padding-left: 0;
+}
+
 .popular__link {
   font-size: 18px;
   line-height: 22px;
@@ -281,14 +363,13 @@ ol {
   background-color: var(--special-yellow-dark);
 }
 
-/* about */
-.about__more,
-.contacts__more {
-  width: 260px;
-}
-
 
 /* service */
+.service__list {
+  list-style: none;
+  padding-left: 0;
+}
+
 .service__button {
   background-color: transparent;
   border: none;
@@ -318,19 +399,47 @@ ol {
   letter-spacing: .1em;
 }
 
+
+/* logotypes */
+.logotypes__list {
+  list-style: none;
+  padding-left: 0;
+}
+
+
 /* about */
-.about__title,
-.contacts__title {
+.about__title {
   letter-spacing: .2em;
+}
+
+.about__partner-list {
+  list-style: circle;
 }
 
 .about__partner-item {
   font-size: 16px;
   line-height: 28px;
-  color: var(--basic-black);
   font-family: "Gilroy";
   font-weight: 800;
 }
+
+.about__partner-item::marker {
+  color: var(--basic-grey-light);
+}
+
+.about__more {
+  width: 260px;
+}
+
+/* contacts */
+.contacts__title {
+  letter-spacing: .2em;
+}
+
+.contacts__more {
+  width: 260px;
+}
+
 
 /* footer */
 .footer {
@@ -338,18 +447,33 @@ color: var(--basic-white);
 background-color: var(--basic-dark);
 }
 
-.footer__menu .menu__link,
+.footer__menu .menu__link {
+  color: var(--basic-white);
+}
+
 .footer__menu .menu__link:visited {
   color: var(--basic-white);
 }
 
-.footer__user .user__link,
+.footer__user .user__link {
+  color: rgba(255, 255, 255, .7);
+}
+
 .footer__user .user__link:visited {
   color: rgba(255, 255, 255, .7);
 }
 
-.footer__site-function .site-function__link,
+.footer__site-function .site-function__link {
+  color: rgba(255, 255, 255, .7);
+}
+
 .footer__site-function .site-function__link:visited {
   color: rgba(255, 255, 255, .7);
 }
 
+
+/* social */
+.social {
+  list-style: none;
+  padding: 0;
+}
