@@ -7,6 +7,7 @@
   --basic-grey: #464646;
   --basic-half-grey: #7e7e7e;
   --basic-grey-light: #e5e5e5;
+
   --special-yellow: #f7e296;
   --special-yellow-dark: #f0c52e;
   --special-yellow-light: #f7e296;
@@ -14,13 +15,16 @@
 
   --input-placeholder: #b3b3b3;
   --input-placeholder-hover: #666666;
+
+  --special-white: rgba(255, 255, 255, .7);
+  --special-black: rgba(0, 0, 0, .6);
 }
 
 
 /* fonts */
 @font-face {
-  font-family: "Gilroy", sans-serif;
-  src: local("Gilroyextrabold"),
+  font-family: "Gilroy";
+  src: local("gilroyextrabold"),
        url("../fonts/gilroyextrabold.woff2") format("woff2"),
        url("../fonts/gilroyextrabold.woff") format("woff");
   font-style: normal;
@@ -28,8 +32,8 @@
 }
 
 @font-face {
-  font-family: "Gilroy", sans-serif;
-  src: local("Gilroylight"),
+  font-family: "Gilroy";
+  src: local("gilroylight"),
       url("../fonts/gilroylight.woff2") format("woff2"),
       url("../fonts/gilroylight.woff") format("woff");
   font-style: normal;
@@ -37,10 +41,11 @@
 }
 
 @font-face {
-  font-family: "Open Sans", sans-serif;
-  src: local("OpenSans light"),
-      local("Open Sans light")
-      url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+  font-family: "Open Sans";
+  src: local("opensanslight"),
+      local("opensanslight"),
+      url("../fonts/opensanslight.woff2"),
+      url("../fonts/opensanslight.woff");
   font-style: normal;
   font-weight: 300;
 }
@@ -53,7 +58,7 @@ body {
   font-size: 15px;
   line-height: 28px;
   color: var(--basic-black);
-  font-family: "Open Sans";
+  font-family: "Open Sans", "Arial", sans-serif;
   font-weight: 300;
   background-color: var(--basic-white);
 }
@@ -80,7 +85,7 @@ img {
 
 .h {
   color: var(--basic-black);
-  font-family: "Gilroy";
+  font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 800;
 }
 
@@ -99,14 +104,14 @@ img {
   line-height: 22px;
   letter-spacing: .2em;
   color: var(--basic-black);
-  font-family: "Gilroy";
+  font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 800;
   text-transform: uppercase;
   position: relative;
 }
 
 .more-btn:active {
-  color: rgba(0, 0, 0, .6);
+  color: var(--special-black);
 }
 
 .more-btn::before {
@@ -152,12 +157,15 @@ img {
 
   font-size: inherit;
   color: var(--input-placeholder);
-  font-family: "Open Sans";
+  font-family: "Open Sans", "Arial", sans-serif;
   font-weight: 300;
 }
 
-.search__input[type='search']::-webkit-search-decoration,
-.search__input[type='search']::-webkit-search-cancel-button {
+.search__input[type="search"]::-webkit-search-decoration {
+  display: none;
+}
+
+.search__input[type="search"]::-webkit-search-cancel-button {
   display: none;
 }
 
@@ -171,8 +179,14 @@ img {
   outline: 0;
 }
 
-.search__input:focus+.search__button,
-.search__button:focus,
+.search__input:focus + .search__button {
+  visibility: visible;
+}
+
+.search__button:focus {
+  visibility: visible;
+}
+
 .search__button:active {
   visibility: visible;
 }
@@ -269,9 +283,9 @@ img {
 .menu__link {
   font-size: 18px;
   line-height: 22px;
-  letter-spacing: .2 em;
+  letter-spacing: .2em;
   color: var(--basic-black);
-  font-family: "Gilroy";
+  font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 800;
   text-transform: uppercase;
 }
@@ -322,7 +336,7 @@ img {
 .item-desc {
   letter-spacing: .1em;
   color: var(--basic-black);
-  font-family: "Gilroy";
+  font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 300;
 }
 
@@ -347,7 +361,7 @@ img {
   line-height: 22px;
   letter-spacing: .05em;
   color: var(--basic-black);
-  font-family: "Gilroy";
+  font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 800;
 }
 
@@ -417,18 +431,14 @@ img {
 }
 
 .about__partner-list {
-  list-style: circle;
+  list-style: none;
 }
 
 .about__partner-item {
   font-size: 16px;
   line-height: 28px;
-  font-family: "Gilroy";
+  font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 800;
-}
-
-.about__partner-item::marker {
-  color: var(--basic-grey-light);
 }
 
 .about__more {
@@ -447,8 +457,8 @@ img {
 
 /* footer */
 .footer {
-color: var(--basic-white);
-background-color: var(--basic-dark);
+  color: var(--basic-white);
+  background-color: var(--basic-dark);
 }
 
 .footer__menu .menu__link {
@@ -460,19 +470,19 @@ background-color: var(--basic-dark);
 }
 
 .footer__user .user__link {
-  color: rgba(255, 255, 255, .7);
+  color: var(--special-white);
 }
 
 .footer__user .user__link:visited {
-  color: rgba(255, 255, 255, .7);
+  color: var(--special-white);
 }
 
 .footer__site-function .site-function__link {
-  color: rgba(255, 255, 255, .7);
+  color: var(--special-white);
 }
 
 .footer__site-function .site-function__link:visited {
-  color: rgba(255, 255, 255, .7);
+  color: var(--special-white);
 }
 
 
