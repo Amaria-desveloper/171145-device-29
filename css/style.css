@@ -43,7 +43,6 @@
 @font-face {
   font-family: "Open Sans";
   src: local("opensanslight"),
-      local("opensanslight"),
       url("../fonts/opensanslight.woff2"),
       url("../fonts/opensanslight.woff");
   font-style: normal;
@@ -83,13 +82,20 @@ img {
   overflow: hidden;
 }
 
-.h {
+.headline {
   color: var(--basic-black);
   font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 800;
 }
 
-.h--3 {
+.headline--4 {
+  font-size: 16px;
+  line-height: 20;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.headline--3 {
   font-size: 47px;
   line-height: 58px;
 }
@@ -491,3 +497,39 @@ img {
   list-style: none;
   padding: 0;
 }
+
+/* =catalog= */
+/* breadcrumbs */
+.breadcrumbs {
+  list-style: none;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 19px;
+}
+
+.breadcrumbs__link {
+  opacity: .3;
+  color: var(--basic-black);
+}
+
+.breadcrumbs__link:hover {
+  opacity: .6;
+}
+
+.breadcrumbs__link:active {
+  opacity: .1;
+}
+
+.breadcrumbs__link:visited {
+  color: var(--basic-black);
+}
+
+/* filter */
+.filter__submit {
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  line-height: 22px;
+  padding-bottom: 14px;
+}
+
