@@ -72,7 +72,7 @@
   </header>
 
  <main class="catalog-main">
-    <h1 class="catalog-main__title headline headline--3">Моноподы для селфи</h1>
+    <h1 class="catalog-main__title headline">Моноподы для селфи</h1>
 
     <ul class="catalog-main__breadcrumbs breadcrumbs">
       <li class="breadcrumbs__item">
@@ -88,7 +88,7 @@
 
   <section class="form">
     <div class="form__header">
-      <h2 class="form__title headline headline--4">Фильтр:</h2>
+      <h2 class="form__title headline">Фильтр:</h2>
     </div>
 
     <form class="form__filter filter" id="form-filter" action="https://echo.htmlacademy.ru" method="get">
@@ -150,11 +150,11 @@
 
   <section class="catalog">
     <div class="catalog__sorting sorting">
-      <h2 class="sorting__title headline headline--4">Сортировка:</h2>
+      <h2 class="sorting__title headline">Сортировка:</h2>
 
       <ul class="sorting__list">
         <li class="sorting__item">
-          <a class="sorting__link sorting__link--price sorting__link--current" href="">По цене</a>
+          <a class="sorting__link sorting__link--price sorting__link--current">По цене</a>
         </li>
         <li class="sorting__item">
           <a class="sorting__link sorting__link--type" href="">По типу</a>
@@ -166,10 +166,14 @@
 
       <ul class="sorting__arrows">
         <li class="sorting__arrow">
-          <a class="sorting__arrow-link sorting__arrow-link--up" href="">Сортировка по возрастанию</a>
+          <a class="sorting__arrow-link sorting__arrow-link--up" href="">
+            <span class="visually-hidden">Сортировка по возрастанию</span>
+        </a>
         </li>
         <li class="sorting__arrow">
-          <a class="sorting__arrow-link sorting__arrow-link--down sorting__arrow-link--active" href="">Сортировка по убыванию</a>
+          <a class="sorting__arrow-link sorting__arrow-link--down sorting__arrow-link--active" href="">
+            <span class="visually-hidden">Сортировка по убыванию</span>
+          </a>
         </li>
       </ul>
     </div>
@@ -177,8 +181,13 @@
     <div class="catalog__display">
       <ul class="catalog__products">
         <li class="product">
+          <div class="product__image-container">
+            <a class="product__link product__link--move-to-cart more-btn" href="">В корзину</a>
+            <a class="product__link product__link--move-to-compare" href="">Добавить к сравнению</a>
+          </div>
           <img class="product__image" src="https://via.placeholder.com/360x380" alt="Селфи-палка простой конструкции">
-          <h3 class="product__title">
+
+          <h3 class="product__title headline">
             <a class="product__link" href="">Любительская селфи-палка</a>
           </h3>
           <p class="product__price">500 руб.</p>
@@ -186,7 +195,7 @@
 
         <li class="product">
           <img class="product__image" src="https://via.placeholder.com/360x380" alt="Селфи-палка с bluetooth">
-          <h3 class="product__title">
+          <h3 class="product__title headline">
             <a class="product__link" href="">Профессиональная селфи-палка</a>
           </h3>
           <p class="product__price">1 500 руб.</p>
@@ -194,7 +203,7 @@
 
         <li class="product">
           <img class="product__image" src="https://via.placeholder.com/360x380" alt="Селфи-палка поплавок">
-          <h3 class="product__title">
+          <h3 class="product__title headline">
             <a class="product__link" href="">Непотопляемая селфи-палка</a>
           </h3>
           <p class="product__price">2 500 руб.</p>
@@ -203,7 +212,7 @@
         <li class="product product--new">
           <img class="product__image" src="https://via.placeholder.com/360x380" alt="Селфи-палка в виде руки">
           <h3 class="product__title">
-            <a class="product__link" href="">Селфи-палка «Следуй за мной»</a>
+            <a class="product__link headline" href="">Селфи-палка «Следуй за мной»</a>
           </h3>
           <p class="product__price">4 900 руб.</p>
         </li>
@@ -211,7 +220,7 @@
 
       <ul class="pagination">
         <li class="pagination__item">
-          <a class="pagination__link">Назад</a>
+          <a class="pagination__link pagination__link--prev">Назад</a>
         </li>
         <li class="pagination__item">
           <a class="pagination__link pagination__link--current">1</a>
@@ -223,7 +232,7 @@
           <a class="pagination__link" href="catalog.html">3</a>
         </li>
         <li class="pagination__item">
-          <a class="pagination__link" href="catalog.html">Вперед</a>
+          <a class="pagination__link pagination__link--next" href="catalog.html" rel="next">Вперед</a>
         </li>
       </ul>
     </div>
@@ -269,17 +278,29 @@
 
     <ul class="footer__social social">
       <li class="social__item">
-        <a class="social__link social__link--fb" href="facebook.com">Фейсбук</a>
+        <a class="social__link social__link--fb" href="facebook.com">
+          <span class="visually-hidden">адрес страницы в Фейсбуке</span>
+          <img src="https://via.placeholder.com/32x32" width="32" height="32" alt="логотип Facebook">
+        </a>
       </li>
       <li class="social__item">
-        <a class="social__link social__link--insta" href="instagam.com">Инстаграм</a>
+        <a class="social__link social__link--insta" href="instagam.com">
+          <span class="visually-hidden">адрес профиля в Инстаграм</span>
+          <img src="https://via.placeholder.com/32x32" width="32" height="32" alt="логотип Instagram">
+        </a>
       </li>
       <li class="social__item">
-        <a class="social__link social__link--vk" href="vkontakte.ru">Вконтакте</a>
+        <a class="social__link social__link--vk" href="vkontakte.ru">
+          <span class="visually-hidden">адрес профиля во Вконтакте</span>
+          <img src="https://via.placeholder.com/32x32" width="32" height="32" alt="логотип Вконтакте">
+        </a>
       </li>
     </ul>
 
-    <a class="footer__copyright" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
+    <a class="footer__copyright" href="https://htmlacademy.ru/intensive/htmlcss">
+      <span class="visually-hidden">HTML Academy</span>
+      <img src="https://via.placeholder.com/27x34" width="27" height="34" alt="">
+    </a>
   </footer>
 </body>
 </html>
