@@ -639,7 +639,7 @@ img {
   margin-bottom: 120px;
 }
 
-.product__image-container {
+.product__buttons-container {
   display: block;
   visibility: hidden;
   position: absolute;
@@ -651,7 +651,7 @@ img {
   text-align: center;
 }
 
-.product:hover > .product__image-container {
+.product:hover > .product__buttons-container {
   visibility: visible;
 }
 
