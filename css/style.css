@@ -347,17 +347,12 @@ img {
   height: 12px;
   background-color: transparent;
   border: none;
-  background-image: url(../img/slider-button.svg);
+  background-image: url(../img/slider_button.svg);
   background-size: cover;
 }
 
-.toggle__button:hover {
-  width: 15px;
-  height: 15px;
-}
-
 .toggle__button--checked {
-  background-image: url(../img/slider-button-checked.svg);
+  background-image: url(../img/slider_button-checked.svg);
 }
 
 /* toggle*/
@@ -621,7 +616,7 @@ img {
   color: var(--special-black-a3);
 }
 
-.sorting__link:hover {
+.sorting__link[href]:hover {
   color: var(--special-black-a6);
 }
 
