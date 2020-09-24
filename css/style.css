@@ -14,19 +14,19 @@
   --special-green: #91c92f;
   --special-grey: #ebebeb;
   --special-grey-light: #d9d9d9;
-  --special-grey-lighter: rgba(238, 238, 238, .7);
+  --special-grey-lighter: rgba(238, 238, 238, 0.7);
 
   --input-placeholder: #b3b3b3;
   --input-placeholder-hover: #666666;
 
-  --special-white-a7: rgba(255, 255, 255, .7);
-  --special-white-a3: rgba(255, 255, 255, .3);
+  --special-white-a7: rgba(255, 255, 255, 0.7);
+  --special-white-a3: rgba(255, 255, 255, 0.3);
 
-  --special-black-a6: rgba(0, 0, 0, .6);
-  --special-black-a5: rgba(0, 0, 0, .5);
-  --special-black-a3: rgba(0, 0, 0, .3);
-  --special-black-a2: rgba(0, 0, 0, .2);
-  --special-black-a1: rgba(0, 0, 0, .1);
+  --special-black-a6: rgba(0, 0, 0, 0.6);
+  --special-black-a5: rgba(0, 0, 0, 0.5);
+  --special-black-a3: rgba(0, 0, 0, 0.3);
+  --special-black-a2: rgba(0, 0, 0, 0.2);
+  --special-black-a1: rgba(0, 0, 0, 0.1);
 }
 
 
@@ -111,7 +111,7 @@ img {
   text-align: center;
   font-size: 18px;
   line-height: 22px;
-  letter-spacing: .2em;
+  letter-spacing: 0.2em;
   color: var(--basic-black);
   font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 800;
@@ -291,13 +291,21 @@ img {
 .menu__link {
   font-size: 18px;
   line-height: 22px;
-  letter-spacing: .2em;
+  letter-spacing: 0.2em;
   color: var(--basic-black);
   font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 800;
   text-transform: uppercase;
 }
 
+.menu__link--open::after {
+  content: url("../img/icon_plus.svg");
+  display: inline-block;
+  vertical-align: text-top;
+  width: 12px;
+  height: 12px;
+  margin-left: 16px;
+}
 
 /* catalog-menu*/
 .catalog-menu {
@@ -363,7 +371,7 @@ img {
 
 /* item-desc */
 .item-desc {
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
   color: var(--basic-black);
   font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 300;
@@ -388,7 +396,7 @@ img {
 .popular__link {
   font-size: 18px;
   line-height: 22px;
-  letter-spacing: .05em;
+  letter-spacing: 0.05em;
   color: var(--basic-black);
   font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 800;
@@ -442,11 +450,11 @@ img {
 .service__description-headline {
   font-size: 47px;
   line-height: 58px;
-  letter-spacing: .2em;
+  letter-spacing: 0.2em;
 }
 
 .service__description-text {
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
 }
 
 
@@ -475,7 +483,7 @@ img {
 .about__title {
   font-size: 47px;
   line-height: 58px;
-  letter-spacing: .2em;
+  letter-spacing: 0.2em;
 }
 
 .about__partner-list {
@@ -495,7 +503,7 @@ img {
 
 /* contacts */
 .contacts__title {
-  letter-spacing: .2em;
+  letter-spacing: 0.2em;
 }
 
 .contacts__more {
@@ -536,11 +544,11 @@ img {
 
 
 .footer__copyright:hover {
-  opacity: .6;
+  opacity: 0.6;
 }
 
 .footer__copyright:active {
-  opacity: .3;
+  opacity: 0.3;
 }
 
 /* social */
@@ -550,11 +558,11 @@ img {
 }
 
 .social__link:hover {
-  opacity: .3;
+  opacity: 0.3;
 }
 
 .social__link:active {
-  opacity: .1;
+  opacity: 0.1;
 }
 
 
@@ -589,7 +597,7 @@ img {
 .form__title {
   font-size: 16px;
   line-height: 20px;
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
@@ -639,11 +647,11 @@ img {
 }
 
 .sorting__arrow-link {
-  opacity: .2;
+  opacity: 0.2;
 }
 
 .sorting__arrow-link:hover {
-  opacity: .4;
+  opacity: 0.4;
 }
 
 .sorting__arrow-link:active {
@@ -722,7 +730,7 @@ img {
 .product__link--move-to-compare {
   font-size: 13px;
   line-height: 18px;
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
   color: var(--special-black-a5);
 }
 
@@ -737,14 +745,14 @@ img {
 .product__title {
   font-size: 18px;
   line-height: 22px ;
-  letter-spacing: .05em;
+  letter-spacing: 0.05em;
 }
 
 
 .product__price {
   font-size: 16px;
   line-height: 18px;
-  letter-spacing: .05em;
+  letter-spacing: 0.05em;
 }
 
 
@@ -769,7 +777,7 @@ img {
   font-weight: 800;
   font-size: 16px;
   line-height: 20px;
-  letter-spacing: .1em;
+  letter-spacing:0.1em;
   text-transform: uppercase;
   color: var(--special-black-a3);
  }
@@ -804,7 +812,7 @@ img {
   color: var(--basic-black);
 }
 
- .pagination__link--next:hover {
+.pagination__link--next:hover {
   background-color: var(--special-grey-light);
   color: var(--basic-black);
 }
