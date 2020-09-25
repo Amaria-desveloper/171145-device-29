@@ -476,10 +476,9 @@ img {
   filter: grayscale(100%) opacity(15%);
 }
 
-.logotypes__image:hover {
+.logotypes__link:hover > .logotypes__image {
   filter: grayscale(0) opacity(100%);
 }
-
 
 /* about */
 .about__title {
