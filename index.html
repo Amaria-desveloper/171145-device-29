@@ -37,36 +37,32 @@
         </ul>
 
         <ul class="nav__menu menu">
-          <li class="menu__item">
-            <a class="menu__link menu__link--open" href="catalog.html">Каталог товаров</a>
-              <ul class="catalog-menu catalog-menu--hidden">
-                <li class="catalog-menu__item">
-                  <a class="catalog-menu__link" href="catalog.html" >Виртуальная реальность</a>
-                </li>
-                <li class="catalog-menu__item">
-                  <a class="catalog-menu__link" href="catalog.html" >Фитнес-браслеты</a>
-                </li>
-                <li class="catalog-menu__item">
-                  <a class="catalog-menu__link" href="catalog.html" >Квадрокоптер</a>
-                </li>
-                <li class="catalog-menu__item">
-                  <a class="catalog-menu__link" href="catalog.html" >Моноподы для селфи</a>
-                </li>
-                <li class="catalog-menu__item">
-                  <a class="catalog-menu__link" href="catalog.html" >Умные часы</a>
-                </li>
-                <li class="catalog-menu__item">
-                  <a class="catalog-menu__link" href="catalog.html" >Экшн-камеры</a>
-                </li>
-              </ul>
+          <li class="menu__item menu__item--catalog">
+            <a class="menu__link menu__link--catalog" href="catalog.html">Каталог товаров</a>
+              <div class="wrapper-catalog-menu">
+                <ul class="catalog-menu catalog-menu--open">
+                  <li class="catalog-menu__item">
+                    <a class="catalog-menu__link" href="catalog.html" >Виртуальная реальность</a>
+                    <a class="catalog-menu__link" href="catalog.html" >Моноподы для селфи</a>
+                    <a class="catalog-menu__link" href="catalog.html" >Экшн-камеры</a>
+                  </li>
+                  <li class="catalog-menu__item">
+                    <a class="catalog-menu__link" href="catalog.html">Фитнес-браслеты</a>
+                    <a class="catalog-menu__link" href="catalog.html">Умные часы</a>
+                  </li>
+                  <li class="catalog-menu__item">
+                    <a class="catalog-menu__link" href="catalog.html">Квадрокоптер</a>
+                  </li>
+                </ul>
+              </div>
           </li>
-          <li class="menu__item">
+          <li class="menu__item menu__item--delivery">
             <a class="menu__link" href="">Доставка</a>
           </li>
-          <li class="menu__item">
+          <li class="menu__item menu__item--warranty">
             <a class="menu__link" href="">Гарантия</a>
           </li>
-          <li class="menu__item">
+          <li class="menu__item menu__item--contacts">
             <a class="menu__link" href="">Контакты</a>
           </li>
         </ul>
@@ -96,22 +92,25 @@
 
           <ol class="slider__list">
             <li class="slider__item">
-            <img class="slider__photo" src="./img/promo_item-selfiestick.png" width="384" height="486" alt="телескопическая селфи-палка">
-              <h3 class="slider__title headline">Делай селфи,<br> как Бен Стиллер!</h3>
-              <p class="slider__text">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
-              <a class="slider__link more-btn" href="catalog.html">Подробнее</a>
-              <table class="slider__description item-desc">
-                <tr>
-                  <td class="item-desc__value">8,5 м</td>
-                  <td class="item-desc__value">5 кг</td>
-                  <td class="item-desc__value">Карбон</td>
-                </tr>
-                <tr>
-                  <td class="item-desc__feature">Длина палки</td>
-                  <td class="item-desc__feature">Вес палки</td>
-                  <td class="item-desc__feature">Материал</td>
-                </tr>
-              </table>
+              <img class="slider__photo" src="./img/promo_item-selfiestick.png" width="384" height="486" alt="телескопическая селфи-палка">
+                <h3 class="slider__title headline">Делай селфи,<br> как Бен Стиллер!</h3>
+                <p class="slider__text">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
+                <a class="slider__link more-btn" href="catalog.html">Подробнее</a>
+
+                <ul class="slider__description item-details">
+                  <li class="item-detail">
+                    <span class="item-detail__text item-detail__text--value">8,5 м</span>
+                    <span class="item-detail__text item-detail__text--feature">Длина палки</span>
+                  </li>
+                  <li class="item-detail">
+                    <span class="item-detail__text item-detail__text--value">5 кг</span>
+                    <span class="item-detail__text item-detail__text--feature">Вес палки</span>
+                  </li>
+                  <li class="item-detail">
+                    <span class="item-detail__text item-detail__text--value">Карбон</span>
+                    <span class="item-detail__text item-detail__text--feature">Материал</span>
+                  </li>
+                </ul>
             </li>
 
             <li class="slider__item">
@@ -181,7 +180,7 @@
           <h2 class="visually-hidden">Сервис интернет-магазина</h2>
 
           <ul class="service__list">
-            <li class="service__item">
+            <li class="service__item service__item--checked">
               <button class="service__button service__button--checked more-btn" type="button">Доставка</button>
             </li>
             <li class="service__item">
@@ -192,9 +191,10 @@
             </li>
           </ul>
 
+
           <div class="service__description service__description--delivery service__description--active">
             <h3 class="service__description-headline headline">Доставка</h3>
-            <p class="service__description-text">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+            <p class="service__description-text">Мы с удовольствием доставим ваш товар прямо к вашему <br> подъезду совершенно бесплатно! Ведь мы неплохо <br> заработаем, поднимая его на ваш этаж.</p>
           </div>
 
           <div class="service__description service__description--warranty">
@@ -242,8 +242,8 @@
         <section class="about">
           <h2 class="visually-hidden">Информация о компании</h2>
             <h3 class="about__title headline">О нас</h3>
-            <p class="about__text">Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
-            <p class="about__text">Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
+            <p class="about__text">Огромный выбор гаджетов не оставит равнодушным гика, <br> который есть в каждом из нас.</p>
+            <p class="about__text">Мы можем доставить ваш товар в самые отдаленные точки <br> России! DEVICE работает со многими транспортными компаниями:</p>
 
             <ul class="about__partner-list">
               <li class="about__partner-item">Деловые линии</li>
@@ -291,7 +291,7 @@
 
       <p class="footer__address">г. Москва, ул. Строителей, 15</p>
 
-      <ul class="footer__menu menu">
+      <ul class="footer__menu menu menu--footer">
         <li class="menu__item">
           <a class="menu__link" href="">Доставка</a>
         </li>
@@ -303,7 +303,7 @@
         </li>
       </ul>
 
-      <p class="footer__telephone">Тел.: +7(495)495-95-95</p>
+      <a class="footer__telephone" href="tel:+74954959595">Тел.: +7(495)495-95-95</a>
 
       <ul class="footer__social social">
         <li class="social__item">
