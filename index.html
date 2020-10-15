@@ -22,8 +22,8 @@
         </form>
 
         <ul class="nav__user user">
-          <li class="user__item">
-            <a class="user__link" href="">Войти</a>
+          <li class="user__item ">
+            <a class="user__link user__link--login" href="">Войти</a>
           </li>
         </ul>
 
@@ -40,7 +40,7 @@
           <li class="menu__item menu__item--catalog">
             <a class="menu__link menu__link--catalog" href="catalog.html">Каталог товаров</a>
               <div class="wrapper-catalog-menu">
-                <ul class="catalog-menu catalog-menu--open">
+                <ul class="catalog-menu">
                   <li class="catalog-menu__item">
                     <a class="catalog-menu__link" href="catalog.html" >Виртуальная реальность</a>
                     <a class="catalog-menu__link" href="catalog.html" >Моноподы для селфи</a>
@@ -80,69 +80,79 @@
 
           <ul class="slider__toggle toggle">
             <li class="toggle__item">
-              <button class="toggle__button toggle__button--checked" type="button"></button>
+              <button class="toggle__button toggle__button--current" type="button" aria-label="Первый слайд"></button>
             </li>
             <li class="toggle__item">
-              <button class="toggle__button" type="button"></button>
+              <button class="toggle__button" type="button" aria-label="Второй слайд"></button>
             </li>
             <li class="toggle__item">
-              <button class="toggle__button" type="button"></button>
+              <button class="toggle__button" type="button" aria-label="Третий слайд"></button>
             </li>
           </ul>
 
-          <ol class="slider__list">
-            <li class="slider__item">
-              <img class="slider__photo" src="./img/promo_item-selfiestick.png" width="384" height="486" alt="телескопическая селфи-палка">
-                <h3 class="slider__title headline">Делай селфи,<br> как Бен Стиллер!</h3>
-                <p class="slider__text">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
-                <a class="slider__link more-btn" href="catalog.html">Подробнее</a>
+          <ol class="slider__list decor decor--slider">
+            <li class="slider__item slide slide--one slide--current">
+              <div class="slide__wrapper-photo">
+                <img class="slide__photo" src="./img/promo_item-selfiestick.png" width="384" height="486" alt="телескопическая селфи-палка">
+              </div>
+              <div class="slide__wrapper-description">
+                <h3 class="slide__title headline">Делай селфи,<br> как Бен Стиллер!</h3>
+                <p class="slide__text">Самая длинная палка для селфи доступна в нашем магазине. <br> Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
+                <a class="slide__link more-btn" href="catalog.html">Подробнее</a>
 
-                <ul class="slider__description item-details">
-                  <li class="item-detail">
-                    <span class="item-detail__text item-detail__text--value">8,5 м</span>
-                    <span class="item-detail__text item-detail__text--feature">Длина палки</span>
+                <ul class="slide__description slide-details">
+                  <li class="slide-detail">
+                    <span class="slide-detail__text slide-detail__text--value">8,5 м</span>
+                    <span class="slide-detail__text slide-detail__text--feature">Длина палки</span>
                   </li>
-                  <li class="item-detail">
-                    <span class="item-detail__text item-detail__text--value">5 кг</span>
-                    <span class="item-detail__text item-detail__text--feature">Вес палки</span>
+                  <li class="slide-detail">
+                    <span class="slide-detail__text slide-detail__text--value">5 кг</span>
+                    <span class="slide-detail__text slide-detail__text--feature">Вес палки</span>
                   </li>
-                  <li class="item-detail">
-                    <span class="item-detail__text item-detail__text--value">Карбон</span>
-                    <span class="item-detail__text item-detail__text--feature">Материал</span>
+                  <li class="slide-detail">
+                    <span class="slide-detail__text slide-detail__text--value">Карбон</span>
+                    <span class="slide-detail__text slide-detail__text--feature">Материал</span>
                   </li>
                 </ul>
+              </div>
             </li>
 
-            <li class="slider__item">
-              <img class="slider__photo" src="./img/promo_item-bracelet.png" width="345" height="485" alt="фитнес-браслет">
-              <h3 class="slider__title headline">Худеем правильно!</h3>
-              <p class="slider__text">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
-              <a class="slider__link more-btn" href="catalog.html">Подробнее</a>
-              <table class="slider__description item-desc">
-                <tr>
-                  <td class="item-desc__value">48 часов</td>
-                </tr>
-                <tr>
-                  <td class="item-desc__feature">Без подзарядки</td>
-                </tr>
-              </table>
+            <li class="slider__item slide slide--two">
+              <div class="slide__wrapper-photo">
+                <img class="slide__photo" src="./img/promo_item-bracelet.png" width="345" height="485" alt="фитнес-браслет">
+              </div>
+              <div class="slide__wrapper-description">
+                <h3 class="slide__title headline">Худеем <br> правильно!</h3>
+                <p class="slide__text">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
+                <a class="slide__link more-btn" href="catalog.html">Подробнее</a>
+                <ul class="slide__description slide-details">
+                  <li class="slide-detail">
+                    <span class="slide-detail__text slide-detail__text--value">48 часов</span>
+                    <span class="slide-detail__text slide-detail__text--feature">Без подзарядки</span>
+                  </li>
+                </ul>
+              </div>
             </li>
 
-            <li class="slider__item">
-              <img class="slider__photo" src="./img/promo_item-quadrocopter.png" width="526" height="334" alt="квадрокоптер">
-              <h3 class="slider__title headline">Порхает как бабочка, жалит как пчела!</h3>
-              <p class="slider__text">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
-              <a class="slider__link more-btn" href="catalog.html">Подробнее</a>
-              <table class="slider__description item-desc">
-                <tr>
-                  <td class="item-desc__value">800 м</td>
-                  <td class="item-desc__value">50 м</td>
-                </tr>
-                <tr>
-                  <td class="item-desc__feature">Дальность полета</td>
-                  <td class="item-desc__feature">Радиус поражения</td>
-                </tr>
-              </table>
+            <li class="slider__item slide slide--three">
+              <div class="slide__wrapper-photo">
+                <img class="slide__photo" src="./img/promo_item-quadrocopter.png" width="526" height="334" alt="квадрокоптер">
+              </div>
+              <div class="slide__wrapper-description">
+                <h3 class="slide__title headline decor decor--white">Порхает как бабочка, жалит как пчела!</h3>
+                <p class="slide__text">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
+                <a class="slide__link more-btn" href="catalog.html">Подробнее</a>
+                <ul class="slide__description slide-details">
+                  <li class="slide-detail">
+                    <span class="slide-detail__text slide-detail__text--value">800 М</span>
+                    <span class="slide-detail__text slide-detail__text--feature">Дальность полета</span>
+                  </li>
+                  <li class="slide-detail">
+                    <span class="slide-detail__text slide-detail__text--value">50 М</span>
+                    <span class="slide-detail__text slide-detail__text--feature">Радиус поражения</span>
+                  </li>
+                </ul>
+              </div>
             </li>
           </ol>
         </div>
@@ -191,21 +201,22 @@
             </li>
           </ul>
 
+          <ul class="service__descriptions">
+            <li class="service__description service__description--delivery service__description--active">
+              <h3 class="service__description-headline headline">Доставка</h3>
+              <p class="service__description-text">Мы с удовольствием доставим ваш товар прямо к вашему <br> подъезду совершенно бесплатно! Ведь мы неплохо <br> заработаем, поднимая его на ваш этаж.</p>
+            </li>
 
-          <div class="service__description service__description--delivery service__description--active">
-            <h3 class="service__description-headline headline">Доставка</h3>
-            <p class="service__description-text">Мы с удовольствием доставим ваш товар прямо к вашему <br> подъезду совершенно бесплатно! Ведь мы неплохо <br> заработаем, поднимая его на ваш этаж.</p>
-          </div>
+            <li class="service__description service__description--warranty">
+              <h3 class="service__description-headline headline">Гарантия</h3>
+              <p class="service__description-text">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
+            </li>
 
-          <div class="service__description service__description--warranty">
-            <h3 class="service__description-headline headline">Гарантия</h3>
-            <p class="service__description-text">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
-          </div>
-
-          <div class="service__description service__description--credit">
-            <h3 class="service__description-headline headline">Кредит</h3>
-            <p class="service__description-text">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
-          </div>
+            <li class="service__description service__description--credit">
+              <h3 class="service__description-headline headline">Кредит</h3>
+              <p class="service__description-text">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
+            </li>
+          </ul>
         </section>
       </div>
     </div>
@@ -239,7 +250,7 @@
       </section>
 
       <div class="wrapper-about-contacts">
-        <section class="about">
+        <section class="about decor decor--about">
           <h2 class="visually-hidden">Информация о компании</h2>
             <h3 class="about__title headline">О нас</h3>
             <p class="about__text">Огромный выбор гаджетов не оставит равнодушным гика, <br> который есть в каждом из нас.</p>
@@ -254,7 +265,7 @@
             <a class="about__more more-btn" href="">Подробнее о нас</a>
         </section>
 
-        <section class="contacts">
+        <section class="contacts decor decor--contacts">
           <h3 class="contacts__title headline">Контакты</h3>
             <p class="contacts__text">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
 
@@ -276,16 +287,16 @@
 
       <ul class="footer__user user">
         <li class="user__item">
-          <a class="user__link" href="">Войти</a>
+          <a class="user__link user__link--login-yellow" href="">Войти</a>
         </li>
       </ul>
 
       <ul class="footer__site-function site-function">
         <li class="site-function__item">
-          <a class="site-function__link site-function__link--compare" href="">Сравнить</a>
+          <a class="site-function__link site-function__link--compare-yellow" href="">Сравнить</a>
         </li>
         <li class="site-function__item">
-          <a class="site-function__link site-function__link--cart" href="">Корзина</a>
+          <a class="site-function__link site-function__link--cart-yellow" href="">Корзина</a>
         </li>
       </ul>
 
@@ -302,6 +313,8 @@
           <a class="menu__link" href="">Контакты</a>
         </li>
       </ul>
+
+      <span class="footer__decor decor decor--footer"></span>
 
       <a class="footer__telephone" href="tel:+74954959595">Тел.: +7(495)495-95-95</a>
 
@@ -338,6 +351,5 @@
       </a>
     </div>
   </footer>
-
 </body>
 </html>
