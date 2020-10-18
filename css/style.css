@@ -632,7 +632,6 @@ img {
   overflow: hidden;
   padding-left: 25px;
   padding-right: 25px;
-
 }
 
 .slider__toggle {
@@ -644,40 +643,17 @@ img {
 .slider__list {
   margin: 0;
   padding-left: 0;
-  counter-reset: slider-counter;
   list-style: none;
 }
 
-.slider__item {
-  position: relative;
-}
-
-.slider__item::before {
-  position: absolute;
-  top: 0;
-  right: 20px;
-  font-size: 179px;
-  line-height: 219px;
-  color: var(--basic-white);
-  font-family: "Gilroy", "Arial", sans-serif;
-  font-weight: 800;
-  text-transform: uppercase;
-  counter-increment: slider-counter;
-  content: "0" counter(slider-counter);
-  z-index: -1;
-}
-
 .slide {
-  display: flex;
+  display: none;
   flex-wrap: nowrap;
   justify-content: space-around;
-  position: absolute;
-  left: -9999px;
 }
 
 .slide--current {
-  position: relative;
-  left: 0;;
+  display: flex;
 }
 
 .slide__wrapper-photo {
@@ -690,6 +666,7 @@ img {
   flex-direction: column;
   align-self: start;
   width: 560px;
+  position: relative;
 }
 
 .slide__photo {
@@ -712,6 +689,18 @@ img {
   padding-bottom: 25px;
   font-size: 47px;
   line-height: 58px;
+}
+
+.slide__number {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  font-size: 179px;
+  line-height: 219px;
+  color: var(--basic-white);
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: 800;
+  z-index: -1;
 }
 
 .slide__text {
@@ -838,9 +827,7 @@ img {
   background-image: url("../img/icon_quadrocopter.svg");
 }
 
-.popular__link--vr:active::before {
 
-}
 /* service */
 .wrapper-service {
   position: relative;
