@@ -13,7 +13,6 @@
   --special-yellow-half: rgba(247, 226, 150, 0.5);
 
   --special-yellow-dark: #f0c52e;
-  --special-yellow-light: #f7e296;
   --special-green: #91c92f;
   --special-grey: #ebebeb;
   --special-grey-light: #d9d9d9;
@@ -786,44 +785,62 @@ img {
   color: var(--basic-black);
   font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 800;
+  position: relative;
 }
-
 .popular__link::before {
   content: " ";
   display: block;
   width: 160px;
   height: 160px;
   margin-bottom: 32px;
-  background-color: var(--special-yellow-light);
-  background-repeat: no-repeat;
-  background-position: center;
+  background-color: var(--special-yellow);
 }
 
 .popular__link:hover::before {
   background-color: var(--special-yellow-dark);
 }
 
-.popular__link--vr::before {
+.popular__link:active::before {
+  background-color: var(--special-yellow-dark);
+}
+
+.popular__link::after {
+  content: " ";
+  display: block;
+  width: 160px;
+  height: 160px;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.popular__link:active::after {
+  opacity: 0.3;
+}
+
+.popular__link--vr::after {
   background-image: url("../img/icon_vr.svg");
 }
 
-.popular__link--monopod::before {
+.popular__link--monopod::after {
   background-image: url("../img/icon_monopod.svg");
 }
 
-.popular__link--action-camera::before {
+.popular__link--action-camera::after {
   background-image: url("../img/icon_action-camera.svg");
 }
 
-.popular__link--fitness-bracelet::before {
+.popular__link--fitness-bracelet::after {
   background-image: url("../img/icon_bracelet.svg");
 }
 
-.popular__link--smart-watch::before {
+.popular__link--smart-watch::after {
   background-image: url("../img/icon_watch.svg");
 }
 
-.popular__link--quadrocopter::before {
+.popular__link--quadrocopter::after {
   background-image: url("../img/icon_quadrocopter.svg");
 }
 
