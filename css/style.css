@@ -71,6 +71,7 @@
 
 body {
   position: relative;
+  overflow-x: hidden;
   min-width: 1200px;
   min-height: 100%;
   padding-top: 20px;
@@ -95,6 +96,7 @@ img {
 /* common */
 .page {
   height: 100%;
+  overflow-x: hidden:;
 }
 
 .visually-hidden {
@@ -1414,7 +1416,7 @@ img {
   position: absolute;
   top: 0;
   right: 0;
-  background-image: linear-gradient(var(--basic-grey-dark) 70px, var(--basic-grey-light) 70px););
+  background-image: linear-gradient(var(--basic-grey-dark) 70px, var(--basic-grey-light) 70px);
   z-index: -1;
 }
 
