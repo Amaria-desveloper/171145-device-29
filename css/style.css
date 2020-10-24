@@ -1618,7 +1618,7 @@ img {
 .form::before {
   content: "";
   display: block;
-  width: 100vw;
+  width: 150vw;
   height: 100%;
 
   position: absolute;
@@ -1637,7 +1637,7 @@ img {
 
 .form__title {
   margin-left: 60px;
-  margin-top: 30px;
+  margin-top: 25px;
 
   font-size: 16px;
   line-height: 20px;
@@ -1722,7 +1722,7 @@ img {
 .sorting {
   display: grid;
   grid-template-columns: 272px 508px 52px;
-  align-items: baseline;
+  align-items: center;
   margin-bottom: 0;
 }
 
@@ -1732,7 +1732,6 @@ img {
   margin-right: 75px;
   margin-bottom: 0;
   padding-left: 75px;
-  padding-top: 25px;
 
   font-size: 16px;
   line-height: 20px;
@@ -1746,7 +1745,6 @@ img {
   flex-wrap: wrap;
   margin: 0;
   padding-left: 0;
-  padding-top: 25px;
 
   list-style: none;
 }
@@ -1787,16 +1785,14 @@ img {
   grid-column: 3;
   display: flex;
   flex-wrap: wrap;
-  margin: 0;
+  margin-top: -5px;
   padding-left:  0;
-  padding-top: 25px;
 
   list-style: none;
 }
 
-
 .sorting__arrow {
-  margin-right: 16px;
+  margin-right: 20px;
 }
 
 .sorting__arrow:last-child {
@@ -1898,9 +1894,9 @@ img {
   transform: translate(-50%, -50%);
   z-index: 1;
 
-  display: block;
-
-  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .product:hover > .product__buttons-container {
@@ -1931,6 +1927,7 @@ img {
 
 .product__image {
   margin-bottom: 30px;
+  object-fit: contain;
 }
 
 .product__title {
