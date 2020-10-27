@@ -353,19 +353,19 @@
 
   <section class="modal modal--write-us">
     <h2 class="visually-hidden">Напишите нам</h2>
-    <form class="write-us-form" id="write-us" name="write-us" action="https://echo.htmlacademy.ru" method="post">
+    <form class="write-us-form" action="https://echo.htmlacademy.ru" method="post">
       <fieldset>
         <p class="write-us-form__field write-us-form__field--name">
           <label class="write-us-form__label">
             Ваше имя:
-            <input class="write-us-form__input" placeholder="Имя Фамилия" autofocus required>
+            <input class="write-us-form__input" name="user-name" type="text" placeholder="Имя Фамилия" autofocus required>
           </label>
         </p>
 
         <p class="write-us-form__field write-us-form__field--email">
           <label class="write-us-form__label">
             Ваш e-mail:
-            <input class="write-us-form__input" type="email" placeholder="email@example.com" required>
+            <input class="write-us-form__input" name="email" type="email" placeholder="email@example.com" required>
           </label>
         </p>
 
@@ -376,7 +376,7 @@
           </label>
         </p>
       </fieldset>
-      <button class="write-us-form__submit more-btn button-submit" type="submit" form="write-us">Отправить</button>
+      <button class="write-us-form__submit more-btn button-submit" type="submit">Отправить</button>
     </form>
     <button class="modal__close close-btn close-btn--write-us" aria-label="Закрыть окно"></button>
   </section>

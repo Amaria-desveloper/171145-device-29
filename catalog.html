@@ -16,7 +16,7 @@
         </a>
 
         <form class="nav__search search" action="https://echo.htmlacademy.ru" method="get" id="header-search">
-          <input class="search__input" type="search" name="header-search" placeholder="Поиск по сайту" aria-label="Поиск по сайту">
+          <input class="search__input" name="header-search" type="search" placeholder="Поиск по сайту" aria-label="Поиск по сайту">
           <button class="search__button" type="submit">Найти</button>
         </form>
 
@@ -171,33 +171,24 @@
 
             <ul class="sorting__list">
               <li class="sorting__item">
-                <button class="sorting__button sorting__button--price sorting__button--active" id="by-cost" type="button" aria-label="Сортировать по цене." aria-pressed="true">По цене</button>
+                <a class="sorting__link sorting__link--price sorting__link--current" aria-label="Сортировать по цене.">По цене</a>
               </li>
               <li class="sorting__item">
-                <button class="sorting__button sorting__button--type" id="by-type" type="button" aria-label="Сортировать по типу.">По типу</button>
+                <a class="sorting__link sorting__link--type" href="" aria-label="Сортировать по типу.">По типу</a>
               </li>
               <li class="sorting__item">
-                <button class="sorting__button sorting__button--rating" id="by-popularity" type="button" aria-label="Сортировать по популярности.">По популярности</button>
+                <a class="sorting__link sorting__link--rating" href="" aria-label="Сортировать по популярности.">По популярности</a>
               </li>
             </ul>
 
-            <form>
-              <fieldset class="wrapper-sorting-arrows">
-                <legend class="visually-hidden">Сортировка по возрастанию или убыванию</legend>
-                <ul class="sorting__arrows">
-                  <li class="sorting__arrow">
-                      <input class="visually-hidden sorting__arrow-input" id="sorting-up" type="radio" name="sorting" value="up">
-                      <label class="sorting__arrow-label sorting__arrow-label--up" for="sorting-up" aria-label="по возрастанию">
-                    </label>
-                  </li>
-                  <li class="sorting__arrow">
-                    <input class="visually-hidden sorting__arrow-input" id="sorting-down" type="radio" name="sorting" value="down" checked>
-                    <label class="sorting__arrow-label sorting__arrow-label--down" for="sorting-down" aria-label="по убыванию">
-                    </label>
-                  </li>
-                </ul>
-              </fieldset>
-            </form>
+            <ul class="sorting__arrows">
+              <li class="sorting__arrow">
+                <a class="sorting__arrow-link sorting__arrow-link--up" href="" aria-label="Сортировка по возрастанию"></a>
+              </li>
+              <li class="sorting__arrow">
+                <a class="sorting__arrow-link sorting__arrow-link--down sorting__arrow-link--active" href="" aria-label="Сортировка по убыванию"></a>
+              </li>
+            </ul>
           </div>
 
           <div class="catalog__display">

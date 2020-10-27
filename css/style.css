@@ -17,8 +17,8 @@
   --special-grey-light: #d9d9d9;
   --special-grey-lighter: rgba(238, 238, 238, 0.7);
 
-  --input-placeholder: var(--special-black-a3);
-  --input-placeholder-hover: var(--special-black-a6);
+  --search-placeholder: var(--special-black-a3);
+  --search-placeholder-hover: var(--special-black-a6);
   --form-input: #f2f2f2;
   --form-input-hover: #eaeaea;
   --form-input-invalid: #f6dada;
@@ -342,7 +342,7 @@ img {
   font-size: inherit;
   font-family: "Open Sans", "Arial", sans-serif;
   font-weight: 300;
-  color: var(--input-placeholder);
+  color: var(--search-placeholder);
 
   background-color: transparent;
   border: none;
@@ -376,15 +376,15 @@ img {
 }
 
 .search__input:hover::-webkit-input-placeholder{
-  color: var(--input-placeholder-hover);
+  color: var(--search-placeholder-hover);
 }
 
 .search__input:hover::-moz-placeholder{
-  color: var(--input-placeholder-hover);
+  color: var(--search-placeholder-hover);
 }
 
 .search__input:hover::placeholder{
-  color: var(--input-placeholder-hover);
+  color: var(--search-placeholder-hover);
 }
 
 .search__button {
@@ -1707,7 +1707,7 @@ img {
   padding-left: 22px;
   padding-top: 0;
 
-  font-family: "Open Sans", "", sans-serif;
+  font-family: "Open Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -1716,15 +1716,6 @@ img {
 
   border: 0;
   background-color: var(--form-input);
-}
-
-.write-us-form__input::-webkit-input-placeholder {
-  font-family: "Open Sans", "", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 19px;
-  color: var(--special-black-a4);
 }
 
 .write-us-form__input:hover {
@@ -2038,7 +2029,7 @@ img {
 }
 
 .range__price input {
-  min-width: auto;
+  width: 55px;
   height: 16px;
 
   font-family: inherit;
@@ -2046,6 +2037,17 @@ img {
 
   border: none;
   background-color: transparent;
+
+  -moz-appearance: textfield;
+}
+
+.range__price input::-webkit-outer-spin-button,
+.range__price input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.range__price input:focus {
+  outline: none;
 }
 
 .filter__item label {
@@ -2252,7 +2254,7 @@ img {
   margin-right: 0;
 }
 
-.sorting__button {
+.sorting__link {
   padding: 0;
 
   font-family: "Opens Sans", "Arial", sans-serif;
@@ -2266,28 +2268,21 @@ img {
   cursor: pointer;
 }
 
-.sorting__button--active {
+.sorting__link--current {
   color: var(--basic-black);
 }
 
-.sorting__button:not(sorting__button--current):focus {
+.sorting__link:not(sorting__link--current):focus {
   color: var(--basic-black-a6);
   outline: none;
 }
 
-.sorting__button:not(sorting__button--current):hover {
+.sorting__link:not(sorting__link--current):hover {
   color: var(--special-black-a6);
 }
 
-.sorting__button:active {
+.sorting__link:active {
   color: var(--basic-black);
-}
-
-
-.wrapper-sorting-arrows{
-  margin: 0;
-  padding: 0;
-  border: none;
 }
 
 .sorting__arrows {
@@ -2308,33 +2303,41 @@ img {
   margin-right: 0;
 }
 
-.sorting__arrow-label--up::before{
+.sorting__arrow-link--up::before {
   content: url("../img/icon_arrow-up.svg");
   display: block;
   width: 10px;
   height: 10px;
 }
 
-.sorting__arrow-label--down::before{
+.sorting__arrow-link--down::before {
   content: url("../img/icon_arrow-down.svg");
   display: block;
   width: 10px;
   height: 10px;
 }
 
-.sorting__arrow-label::before {
+.sorting__arrow-link:focus {
+  outline: none;
+}
+
+.sorting__arrow-link::before {
   opacity: 0.2;
 }
 
-.sorting__arrow-input:checked + label::before {
-  opacity: 1;
-}
-
-.sorting__arrow-label:hover::before {
+.sorting__arrow-link:focus::before {
   opacity: 0.4;
 }
 
-.sorting__arrow-label:active::before {
+.sorting__arrow-link:hover::before {
+  opacity: 0.4;
+}
+
+.sorting__arrow-link:active::before {
+  opacity: 1;
+}
+
+.sorting__arrow-link--active::before {
   opacity: 1;
 }
 
@@ -2519,16 +2522,16 @@ img {
   color: var(--special-black-a3);
  }
 
-.pagination__link[href]:not(.pagination__link--next):focus{
+.pagination__link[href]:not(.pagination__link--prev):not(.pagination__link--next):focus {
   color: var(--special-black-a6);
   outline: none;
 }
 
-.pagination__link[href]:not(.pagination__link--next):hover{
+.pagination__link[href]:not(.pagination__link--prev):not(.pagination__link--next):hover {
   color: var(--special-black-a6);
 }
 
-.pagination__link:active{
+.pagination__link:active {
   color: var(--basic-black);
 }
 
@@ -2542,7 +2545,8 @@ img {
   color: var(--basic-black);
 }
 
-.pagination__link--prev:focus {
+.pagination__link--prev[href]:focus {
+  outline: none;
   background-color: var(--special-grey-light);
 }
 
