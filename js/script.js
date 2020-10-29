@@ -3,12 +3,16 @@
 (function () {
   const contactsButton = document.querySelector(`.contacts__more`);
   const modalFeedbackForm = document.querySelector(`.modal--write-us`);
-  const modalButtonClose = document.querySelector(`.modal__close`);
+  const modalFormButtonClose = document.querySelector(`.modal__close`);
   const feedbackForm = document.querySelector(`.write-us-form`);
   const feedbackName = feedbackForm.querySelector(`.write-us-form__input[name="user-name"]`);
   const feedbackEmail = feedbackForm.querySelector(`.write-us-form__input[name="email"]`);
   const feedbackMessage = feedbackForm.querySelector(`.write-us-form__input[name="message"]`);
 
+  const mapLink = document.querySelector(`.map`);
+  const modalMap = document.querySelector(`.modal--map`);
+  const modalMapButtonClose = modalMap.querySelector(`.modal__close`);
+  const modalMapPlug = modalMap.querySelector(`.modal__plug`);
 
   let isStorageSupport = true;
   let storage = {
@@ -27,33 +31,33 @@
   }
 
 
-  const modalEscPressHandler = function (evt) {
+  const openModal = function (element, escHandler) {
+    element.classList.add(`modal--open`);
+
+    document.addEventListener(`keydown`, escHandler);
+  };
+
+
+  const closeModal = function (element, escHandler) {
+    element.classList.remove(`modal--open`);
+
+    document.removeEventListener(`keydown`, escHandler);
+  };
+
+
+  const modalFormEscPressHandler = function (evt) {
     if (evt.key === `Escape`) {
       evt.preventDefault();
       closeModal(modalFeedbackForm);
       modalFeedbackForm.classList.remove(`modal--error`);
       contactsButton.focus();
-      document.removeEventListener(`keydown`, modalEscPressHandler);
+      document.removeEventListener(`keydown`, modalFormEscPressHandler);
     }
   };
 
-  const openModal = function (element) {
-    element.classList.add(`modal--open`);
-
-    document.addEventListener(`keydown`, modalEscPressHandler);
-  };
-
-
-  const closeModal = function (element) {
-    element.classList.remove(`modal--open`);
-
-    document.removeEventListener(`keydown`, modalEscPressHandler);
-  };
-
-
   contactsButton.addEventListener(`click`, function (evt) {
     evt.preventDefault();
-    openModal(modalFeedbackForm);
+    openModal(modalFeedbackForm, modalFormEscPressHandler);
 
     if (storage) {
       feedbackName.value = storage.feedbackName;
@@ -65,9 +69,9 @@
   });
 
 
-  modalButtonClose.addEventListener(`click`, function (evt) {
+  modalFormButtonClose.addEventListener(`click`, function (evt) {
     evt.preventDefault();
-    closeModal(modalFeedbackForm);
+    closeModal(modalFeedbackForm, modalFormEscPressHandler);
     modalFeedbackForm.classList.remove(`modal--error`);
     contactsButton.focus();
   });
@@ -92,4 +96,30 @@
     }
   });
 
+
+  const modalMapEscPressHandler = function (evt) {
+    if (evt.key === `Escape`) {
+      evt.preventDefault();
+      closeModal(modalMap);
+      modalMapPlug.classList.remove(`modal__plug--off`);
+      mapLink.focus();
+      document.removeEventListener(`keydown`, modalMapEscPressHandler);
+    }
+  };
+
+
+  mapLink.addEventListener(`click`, function (evt) {
+    evt.preventDefault();
+    modalMapPlug.classList.add(`modal__plug--off`);
+    openModal(modalMap, modalMapEscPressHandler);
+
+  });
+
+
+  modalMapButtonClose.addEventListener(`click`, function (evt) {
+    evt.preventDefault();
+    closeModal(modalMap, modalMapEscPressHandler);
+    modalMapPlug.classList.remove(`modal__plug--off`);
+    mapLink.focus();
+  });
 })();

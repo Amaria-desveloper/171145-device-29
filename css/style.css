@@ -1625,13 +1625,23 @@ img {
   display: block;
 
   -webkit-animation: bounce 0.6s;
-
           animation: bounce 0.6s;
 }
 
 .modal--error {
   -webkit-animation: shake 0.6s;
           animation: shake 0.6s;
+}
+
+.modal__plug {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.modal__plug--off {
+  display: none;
 }
 
 .close-btn {
@@ -1725,7 +1735,7 @@ img {
   line-height: 19px;
   color: var(--special-black-a4);
 
-  border: 0;
+  border: 2px solid var(--form-input);
   background-color: var(--form-input);
 }
 
