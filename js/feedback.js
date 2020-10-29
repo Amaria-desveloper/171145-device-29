@@ -33,6 +33,7 @@
       closeModal(modalFeedbackForm);
       modalFeedbackForm.classList.remove(`modal--error`);
       contactsButton.focus();
+      document.removeEventListener(`keydown`, modalEscPressHandler);
     }
   };
 
