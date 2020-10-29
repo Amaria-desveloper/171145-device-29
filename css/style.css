@@ -1687,6 +1687,13 @@ img {
 }
 
 .write-us-form > fieldset {
+  margin: 0;
+  padding: 0;
+
+  border: 0;
+}
+
+.write-us-form__fieldset-imitate {
   display: grid;
   grid-template-columns: 360px 360px;
   grid-template-rows: 82px 199px;
